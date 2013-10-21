@@ -1,0 +1,81 @@
+%----------------------------------------------------------------------------
+%-------Thesis Report -------------------------------------------------------
+%----------------------------------------------------------------------------
+						
+\documentclass[12pt, oneside, openany, notitlepage]{report}
+ 
+
+%----------------------------------------------------------------------------
+%-------Packages-------------------------------------------------------------
+%----------------------------------------------------------------------------
+
+\usepackage{amsfonts,amsmath,amssymb,amsthm} % for mathematical symbols
+
+% \usepackage[pdftex, colorlinks=false]{hyperref} % Only if you want to have hypertext links within the document (not required)
+
+\usepackage{tocloft} % to be able to adapt the Table of Contents 
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}  % To add leader dots in the Table of Contents
+
+\renewcommand{\contentsname}{Table of Contents} % Rename the Table of Contents
+
+\usepackage{setspace} % To change the interline space
+\onehalfspacing     % Replace by ' \doublespacing' if you want a double space interline 
+
+
+%-------------------------------------------------------------------------
+%-------Document - First Components --------------------------------------
+%-------------------------------------------------------------------------
+
+\begin{document}
+
+\pagenumbering{roman}  % set page numbering using roman numbers 
+
+\input{title}
+
+\input{abstract}
+
+\phantomsection  % So that hyperref jumps to the right place
+\cleardoublepage % To get the right numbering in the ToC
+\addcontentsline{toc}{chapter}{Table of Contents} % To add this entry in the Table of Contents
+\tableofcontents
+
+% If you have a table of figures, add the following lines :
+% \phantomsection  % So that hyperref jumps to the right place
+% \cleardoublepage
+% \addcontentsline{toc}{chapter}{Table of Figures} % To add this entry in the Table of Contents
+% \listoffigures
+
+
+ \newpage
+
+
+%-------------------------------------------------------------------------
+%--------RESEARCH CHAPTERS------------------------------------------------
+%-------------------------------------------------------------------------
+ 
+\setcounter{page}{1}   %reset page counter to 1
+\pagenumbering{arabic}  % set page numbering using arabic numbers
+
+\input{chapter1}
+
+
+
+
+
+
+%--------Bibliography-----------------------------------------------
+
+\newpage  \thispagestyle{empty}
+\nocite{*}  % so that all entries in the bibliography appear regardless if they quoted in the document or not
+\bibliographystyle{alpha} % bibliography style
+\phantomsection % so that hyper ref jumps to the right place
+\cleardoublepage % To get correct page numbering in the ToC
+\addcontentsline{toc}{chapter}{Bibliography} % To add this entry in the ToC
+\bibliography{biblio}
+
+
+
+
+\end{document}
+
+ 
