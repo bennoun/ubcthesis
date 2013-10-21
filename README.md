@@ -8,7 +8,7 @@ I have set up this template as I didn't like the ones provided on FoGS website (
 
 This template is composed of 4 LaTeX files :
 
-1) thesis.tex : this is the "base" file with the different packages you need.If you want to add chapters, preface and so on just create the corresponding file and include it in thesis.tex with the command : \input{myfile} where ''myfile'' is the name of the file (as it is done for chapter1 for example).
+1) thesis.tex : this is the "base" file (the file you will compile) with the different packages you need.If you want to add chapters, preface and so on just create the corresponding file and include it in thesis.tex with the command : \input{myfile} where ''myfile'' is the name of the file (as it is done for chapter1 for example).
 The packages : amsfonts,amsmath,amssymb,amsthm are there to be able to typeset mathematical symbols (and you will probably need them).
 The package : hyperref is only useful if you want to make hypertext links with your document. 
 
